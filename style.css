@@ -85,7 +85,7 @@ header .icons .fa-search{
 }
 .channel.subscribe
 .info{
-    margin:0 0
+    margin:0;
     padding: var(--padding-size);
 }
 .info .metadata .hashtag{
