@@ -66,7 +66,7 @@ header .icons .fa-search{
     top:0;
     text-align: center;
     background-color: #92b5d9;
-    background-image: url("/image/sky.png.png");
+    background-image: url("./image/sky.png.png");
     opacity: 30;
 }
 .player iframe{
