@@ -1,0 +1,219 @@
+:root{
+    /*coolr*/
+    --white-color: #fff;
+    --black-color:#140a00;
+    --blue-color: #045fd4;
+    --red-color:#ff0000;
+    --grey-dark-color:#909090;
+    --grey-light-color:#e0e0e0;
+    --blue-light-clolor:#92b5d9;
+    /*size*/
+    --spacing: 12px;
+    --spacing-small:6px;
+    --avatar-size:36px;
+    --padding-size: 12px;
+    --avatar-size: 36px;
+    /*font size*/
+    --font-large: 44px;
+    --font-regular: 16px;
+    --font-medium: 24px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Roboto;
+}
+ul{
+    list-style: none;
+}
+button,
+button:focus{
+    border:none;
+    cursor: pointer;
+    outline: none;
+}
+/*Header*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    padding:var(--spacing);
+    background-color: black;
+    color:white;
+}
+
+header .logo
+{
+    font-size: var(--font-large);
+}
+
+header .logo i{
+    color:var(--red-color);
+}
+
+header .icons .fa-search{
+    margin-right: var(--spacing);
+}
+/*video player*/
+.player{
+    position: sticky;
+    top:0;
+    text-align: center;
+    background-color: #92b5d9;
+    background-image: url("/image/sky.png.png");
+    opacity: 30;
+}
+.player iframe{
+    width:100%;
+    height: 500px;
+    max-width: 1000px;
+}
+.channel .metadata img{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.channel .metadata .info{
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+.channel.subscribe
+.info{
+    margin:0 0
+    padding: var(--padding-size);
+}
+.info .metadata .hashtag{
+    display:flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+.info .metadata .hashtag li{
+    margin-right:var(--spacing);
+}
+.info .metadata .titleandbutton{
+    display: flex;
+}
+.info .metadata .titleandbutton .title{
+    font-size: var(--font-medium);
+    margin-right: var(--padding-size);
+}
+.info .metadata .titleandbutton .title.clamp{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.info .metadata .titleandbutton .views{
+    font-size: var(--font-small);
+}
+
+.info .metadata .titleandbutton .title.clamp{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.info .metadata .titleandbutton .moreBtn{
+    height: 100%;
+    transition: transform 300ms ease-in-out; 
+}
+.info .metadata .titleandbutton .moreBtn.clicked{
+    transform: rotate(180deg); 
+}
+header .icon .fa-search{
+    margin-right: var(--padding-size);
+
+}
+.info .views{
+    font-size: 12px;
+    color:#909090;
+
+}
+.actions{
+    display:flex;
+    justify-content: space-around;
+    margin:var(--padding-size) 0;
+
+}
+.actions button{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+.action button i{
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding-size) / 2);
+    font-size: 16px;
+}
+.action button i .active{
+    color:var(--blue-color);
+
+}
+.channel{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--grey-light-color);
+    border-bottom: 2px solid var(--grey-light-color);
+}
+.channel .metadata{
+    display: flex;
+    align-items: center;
+}
+.channel .metadata img{
+    margin: 10px auto;
+    width: calc(var(--avatar-size)*1.7);
+    height: calc(var(--avatar-size)*2);
+    border-radius: 50%;
+}
+.channel .metadata.info{
+    display: flex;
+    flex-direction:column-reverse;
+}
+.channel .metadata .info .name{
+    padding-top: 0%;
+    font-size: var(--font-medium);
+}
+.channel .metadata .info.subscribers{
+    font-size: var(--font-small);
+    color: #909090;
+}
+.channel .subscribe{
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+}
+.upnext> .title{
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding-size)/2);
+}
+.upnext .item{
+    display:flex;
+    margin-top:var(--spacing);
+}
+.upnext .item .img {
+    display: inline-block;
+    flex-basis: 15%;
+    margin-right: var(--spacing);
+}
+.upnext .item .img img{
+    width: 100%;
+}
+.upnext .item .info{
+    display: inline-block;
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.upnext .item .Btn{
+    display: inline-block;
+    flex-basis: 5%;
+    height: 100%;
+}
